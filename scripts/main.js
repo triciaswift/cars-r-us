@@ -1,6 +1,8 @@
+import { CustomOrders } from "./CustomOrders.js";
 import { InteriorOptions } from "./Interiors.js";
+import { OrderButton } from "./OrderButton.js";
 import { PaintOptions } from "./Paints.js";
-import { TechnologiesOptions } from "./Technologies.js";
+import { TechsOptions } from "./Technologies.js";
 import { WheelsOptions } from "./Wheels.js";
 
 const container = document.querySelector("#container");
@@ -8,11 +10,13 @@ const container = document.querySelector("#container");
 const render = async () => {
   const paintOptionHTML = await PaintOptions();
   const interiorOptionHTML = await InteriorOptions();
-  const technologyOptionHTML = await TechnologiesOptions();
+  const techOptionHTML = await TechsOptions();
   const wheelOptionHTML = await WheelsOptions();
+  const orderButton = OrderButton();
+  const ordersHTML = await CustomOrders();
 
   const applicationHTML = `
-        <h1 class="body_header">Cars 'R Us</h1>
+        <h1>Cars 'R Us</h1>
         
         <h2>Cars 'R Us: Personal Car Building</h2>
         <article class="choices">
@@ -33,19 +37,26 @@ const render = async () => {
     
             <section class="choices_technologies">
                 <h3 class="choices_header">Technologies</h3>
-                ${technologyOptionHTML}
+                ${techOptionHTML}
             </section>
         </article>
     
         <article class="placeOrder">
+        ${orderButton}
+        <div class="error_message"></div>
         </article>
     
         <article class="customOrders">
-            <h2>Custom Car Orders</h2>
+            <h2 class="header_orders">Custom Car Orders</h2>
+            ${ordersHTML}
         </article>
     `;
 
   container.innerHTML = applicationHTML;
 };
+
+document.addEventListener("newOrderPlaced", (event) => {
+  render();
+});
 
 render();
