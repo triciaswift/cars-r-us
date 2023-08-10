@@ -3,12 +3,19 @@
 body,
 button,
 input,
-select,
 textarea {
   color: #404040;
   font-family: "Comfortaa", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
+}
+
+select {
+  color: #404040;
+  font-family: "Comfortaa", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 10px;
 }
 
 h1,
@@ -21,10 +28,18 @@ h6 {
   letter-spacing: 2px;
 }
 
+.body_header {
+  text-align: center;
+}
+
 .choices {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+.choices_header {
+  margin: 0;
 }
 
 .choices_paints {
