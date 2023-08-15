@@ -6,7 +6,7 @@ const handleButtonClick = (clickEvent) => {
     if (
       transientState.paintId &&
       transientState.interiorId &&
-      transientState.techId &&
+      transientState.packageId &&
       transientState.wheelId
     ) {
       SaveOrder();

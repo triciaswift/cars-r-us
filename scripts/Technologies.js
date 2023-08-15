@@ -8,7 +8,7 @@ const handleTechChoice = (changeEvent) => {
 };
 
 export const TechsOptions = async () => {
-  const response = await fetch("http://localhost:8088/techs");
+  const response = await fetch("http://localhost:8088/packages");
   const techs = await response.json();
 
   let techHTML = `<select id="techs">`;
@@ -17,7 +17,7 @@ export const TechsOptions = async () => {
   document.addEventListener("change", handleTechChoice);
 
   const techOptionArray = techs.map((tech) => {
-    return `<option value="${tech.id}">${tech.tech}</option>`;
+    return `<option value="${tech.id}">${tech.package} -- $${tech.price}</option>`;
   });
 
   techHTML += techOptionArray.join("");

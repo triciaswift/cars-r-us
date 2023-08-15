@@ -17,7 +17,7 @@ export const PaintOptions = async () => {
   document.addEventListener("change", handlePaintChoice);
 
   const paintOptionArray = paints.map((paint) => {
-    return `<option value="${paint.id}">${paint.paint}</option>`;
+    return `<option value="${paint.id}">${paint.paint} -- $${paint.price}</option>`;
   });
 
   paintHTML += paintOptionArray.join("");
