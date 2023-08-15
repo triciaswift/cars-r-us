@@ -136,6 +136,27 @@
       "packageId": 1,
       "wheelId": 2,
       "id": 7
+    },
+    {
+      "paintId": 1,
+      "interiorId": 2,
+      "packageId": 2,
+      "wheelId": 2,
+      "id": 8
+    },
+    {
+      "paintId": 1,
+      "interiorId": 2,
+      "packageId": 1,
+      "wheelId": 1,
+      "id": 9
+    },
+    {
+      "paintId": 2,
+      "interiorId": 4,
+      "packageId": 2,
+      "wheelId": 1,
+      "id": 10
     }
   ]
 }

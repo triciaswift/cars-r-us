@@ -46,7 +46,7 @@ const render = async () => {
         <div class="error_message"></div>
         </article>
     
-        <article class="customOrders">
+        <article class="custom_orders">
             <h2 class="header_orders">Custom Car Orders</h2>
             ${ordersHTML}
         </article>

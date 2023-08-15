@@ -17,7 +17,7 @@ export const InteriorOptions = async () => {
   document.addEventListener("change", handleInteriorChoice);
 
   const interiorOptionArray = interiors.map((interior) => {
-    return `<option value="${interior.id}">${interior.interior}</option>`;
+    return `<option value="${interior.id}">${interior.interior} -- $${interior.price}</option>`;
   });
 
   interiorHTML += interiorOptionArray.join("");

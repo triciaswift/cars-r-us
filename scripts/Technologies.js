@@ -17,7 +17,7 @@ export const TechsOptions = async () => {
   document.addEventListener("change", handleTechChoice);
 
   const techOptionArray = techs.map((tech) => {
-    return `<option value="${tech.id}">${tech.package}</option>`;
+    return `<option value="${tech.id}">${tech.package} -- $${tech.price}</option>`;
   });
 
   techHTML += techOptionArray.join("");

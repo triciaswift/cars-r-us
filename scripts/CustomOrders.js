@@ -16,7 +16,7 @@ export const CustomOrders = async () => {
       currency: "USD",
     });
 
-    return `<div>${order.paint.paint} car with 
+    return `<div class="custom_order">${order.paint.paint} car with 
     ${order.wheel.wheel} wheels, 
     ${order.interior.interior} interior, and the 
     ${order.package.package} for a total cost of 

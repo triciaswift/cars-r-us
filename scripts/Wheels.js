@@ -17,7 +17,7 @@ export const WheelsOptions = async () => {
   document.addEventListener("change", handleWheelChoice);
 
   const wheelOptionArray = wheels.map((wheel) => {
-    return `<option value="${wheel.id}">${wheel.wheel}</option>`;
+    return `<option value="${wheel.id}">${wheel.wheel} -- $${wheel.price}</option>`;
   });
 
   wheelHTML += wheelOptionArray.join("");
